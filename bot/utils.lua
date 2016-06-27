@@ -1288,7 +1288,7 @@ end
 function send_api_msg(msg, receiver, text, disable_web_page_preview, markdown) 
   local api_key = '211865746:AAExVhEZeV3CqJIZuLv7L13F1ptmx4NS87E' --put your api token here
   local url_api = 'https://api.telegram.org/bot'..api_key 
-      ..'/sendMessage?chat_id='..receiver..'&text='..URL.escape(text) 
+      ..'/sendMessage?channel_id='..receiver..'&text='..URL.escape(text) 
   if disable_web_page_preview == true then 
     url_api = url_api..'&disable_web_page_preview=true' 
   end 
