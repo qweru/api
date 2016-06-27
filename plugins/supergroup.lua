@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been added!'
+	  local text = '<b>SuperGroup</b> <i>has been added!</i>'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -1268,7 +1268,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return "<code>SuperGroup</code> <i>ID</i> <b>for</b> " ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id..
+				return "SuperGroup ID for " ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id
 			end
 		end
 
